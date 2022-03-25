@@ -12,4 +12,5 @@ def cut_image_by_quarter(path):
     new_image.convert("L").save(path_cropped)
     return path_cropped
 
-cut_image_by_quarter("image/original/image.jpg")
+test = Image.open(cut_image_by_quarter("image/original/image.jpg"))
+test.show()
