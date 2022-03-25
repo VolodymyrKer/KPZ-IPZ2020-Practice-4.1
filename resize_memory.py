@@ -12,6 +12,7 @@ def resize_image(path):
     original_size = os.path.getsize(path)
 
     path_resize = "image/cropped/resized.jpg"
+    image.convert("L").save(path_resize)
     new_image_size = os.path.getsize(path_resize)
     wanted_size = int(original_size * 0.75)
 
