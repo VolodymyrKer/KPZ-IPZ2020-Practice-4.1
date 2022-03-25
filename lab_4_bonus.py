@@ -9,6 +9,6 @@ def cut_image_by_quarter(path):
     heigth = image.size[1]
     new_image = image.resize((int(width*0.75), int(heigth*0.75)))
     path_cropped = "image/cropped/cropped.jpg"
-    new_image.save(path_cropped)
+    new_image.convert("L").save(path_cropped)
 
 cut_image_by_quarter("image/original/image.jpg")
